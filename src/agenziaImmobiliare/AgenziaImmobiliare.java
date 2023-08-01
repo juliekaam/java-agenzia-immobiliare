@@ -45,20 +45,20 @@ public Immobile ricercaImmobilePerCodice(String codice){
 
 
     //un metodo per restituire l’immobile che ha avuto il maggior numero di persone interessate
-    public String immobileConmaggiorInteresse() {
+    public Immobile immobileConmaggiorInteresse() {
         int maxInteresse = 0;
 
-        String numeroInteressati = null;
+        Immobile immobileInteressati = null;
         for (Immobile immobile : listaImmobili) {
-
+            int personeInteressate = immobile.getPersonaInteressata();
             if (immobile.getPersonaInteressata() > maxInteresse) {
-                numeroInteressati =immobile.getCodice() ;
-
+                maxInteresse =personeInteressate ;
+               immobileInteressati=immobile;
                 break;
 
             }
 
         }
-        return numeroInteressati;
+        return immobileInteressati;
     }
 }

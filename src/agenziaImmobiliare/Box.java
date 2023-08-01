@@ -36,7 +36,7 @@ public class Box  extends Immobile {
                 ", citta='" + getCitta() + '\'' +
                 ", supercicia=" + getSupercicia() +
                 ", personeInteressate=" + getPersonaInteressata()+
-                "numeroposti=" + numeroposti +
+                ", numeroposti=" + numeroposti +
                 '}';
     }
 }

@@ -67,7 +67,7 @@ public class Immobile {
      //  aggiungere un metodo per incrementare questo numero.
  public int getPersonaInteressata(){
 
-      return personeInteressate;
+      return personeInteressate++;
  }
  // Immobile il metodo reimpostaSuperfici che prende in input la nuova superficie
  public int reinpostaSuperfici(int nuovaSuperficia, int superficieGiardino){

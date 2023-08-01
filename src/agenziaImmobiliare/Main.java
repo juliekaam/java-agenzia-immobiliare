@@ -26,19 +26,35 @@ public class Main {
         agenzia.aggiungiImmobili(villa1);
 
 
-        Immobile[] listaImmobili;
-        for (Immobile immobile:
-             ) {
-            System.out.println(listaImmobili);
+        System.out.println(" Box: " + box.toString());
+        System.out.println("Abitazione: " + abitazione.toString());
+        System.out.println(" Villa: " + villa.toString());
 
-
+        System.out.println("Ricerca immobile per codice :");
+        Immobile immobileCercato = agenzia.ricercaImmobilePerCodice("a10g");
+        if (immobileCercato != null) {
+            System.out.println(immobileCercato.toString());
+        } else {
+            System.out.println("Immobile non trovato.");
         }
-        System.out.println(agenzia);
+
+        box.getPersonaInteressata();
+        abitazione.getPersonaInteressata();
+        villa.getPersonaInteressata();
+
+        System.out.println("Immobile con maggior numero di persone interessate:");
+        Immobile piuPiacuto = agenzia.immobileConmaggiorInteresse();
+        if (piuPiacuto != null) {
+            System.out.println(piuPiacuto.toString());
+        } else {
+            System.out.println("Nessun immobile presente.");
+        }
+    }
 
         //System.out.println(villa.(200,45));
-        System.out.println(villa);
+        //System.out.println(villa);
 
-    }
+
 
 
 }
