@@ -1,12 +1,12 @@
 package agenziaImmobiliare;
 
-public class villa extends Abitazione{
+public class Villa extends Abitazione{
 
     private int dimensioniGiardino;
 
     //COSTRUTTORI
-    public villa(String codice, String indirizzo, int cap, String citta, int supercicia, int numeroVani, int numriBagni,int dimensioniGiardino) {
-        super(codice, indirizzo, cap, citta, supercicia, numeroVani, numriBagni);
+    public Villa(String codice, String indirizzo, int cap, String citta, int supercicia,int personaIntessate, int numeroVani, int numriBagni, int dimensioniGiardino) {
+        super(codice, indirizzo, cap, citta, supercicia, personaIntessate,numeroVani, numriBagni);
         this.dimensioniGiardino=dimensioniGiardino;
     }
 
@@ -21,6 +21,11 @@ public class villa extends Abitazione{
     }
     //METODI
 
+   //overload
+   public void reimpostaSuperfici(int surface, int superficieGiardino) {
+       this.dimensioniGiardino = superficieGiardino;
+       super.reinpostaSuperfici(surface,superficieGiardino);}
+
     @Override
     public String toString() {
         return "villa{" + "codice='" + getCodice() + '\'' +
@@ -28,10 +33,10 @@ public class villa extends Abitazione{
                 ", cap=" + getCap() +
                 ", citta='" + getCitta() + '\'' +
                 ", supercicia=" + getSupercicia() +
-                ", personeInteressate=" + aggiungipersona()+
-                "numeroVani=" + getNumeroVani() +
+                ", personeInteressate=" + getPersonaInteressata()+
+                ", numeroVani=" + getNumeroVani() +
                 ", numriBagni=" + getNumriBagni() +
-                "dimensioniGiardino=" + dimensioniGiardino +
+                ", dimensioniGiardino=" + dimensioniGiardino +
                 '}';
     }
 

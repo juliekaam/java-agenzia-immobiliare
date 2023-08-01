@@ -1,14 +1,14 @@
 package agenziaImmobiliare;
 
-public class Abitazione extends Immobili{
+public class Abitazione extends Immobile {
     private int numeroVani;
     private int numriBagni;
 
     //COSTRUTTORI
 
-    public Abitazione(String codice, String indirizzo, int cap, String citta, int supercicia,int numeroVani,int numriBagni) {
+    public Abitazione(String codice, String indirizzo, int cap, String citta, int supercicia,int personaIntessate,int numeroVani,int numriBagni) {
         //atributi della super
-        super(codice, indirizzo, cap, citta, supercicia);
+        super(codice, indirizzo, cap, citta, supercicia,personaIntessate);
         //atributi dell'abitazione
         this.numeroVani=numeroVani;
         this.numriBagni=numriBagni;
@@ -40,7 +40,7 @@ public class Abitazione extends Immobili{
                 ", cap=" + getCap() +
                 ", citta='" + getCitta() + '\'' +
                 ", supercicia=" + getSupercicia() +
-                ", personeInteressate=" + aggiungipersona()+
+                ", personeInteressate=" + getPersonaInteressata()+
                 "numeroVani=" + numeroVani +
                 ", numriBagni=" + numriBagni +
                 '}';

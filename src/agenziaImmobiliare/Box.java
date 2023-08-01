@@ -1,13 +1,13 @@
 package agenziaImmobiliare;
 
-public class Box  extends Immobili {
+public class Box  extends Immobile {
     private int numeroposti;
 
 
     //COSTRUTTORI
-    public Box(String codice, String indirizzo, int cap, String citta, int supercicia,int numeroposti) {
+    public Box(String codice, String indirizzo, int cap, String citta, int supercicia,int numeroposti,int personeInteressate) {
         //ATRIBUTI DELLA SUPER
-        super(codice, indirizzo, cap, citta, supercicia);
+        super(codice, indirizzo, cap, citta, supercicia,personeInteressate);
         //ATRIBUTI DELLA BOX
         this.numeroposti=numeroposti;
     }
@@ -35,7 +35,7 @@ public class Box  extends Immobili {
                 ", cap=" + getCap() +
                 ", citta='" + getCitta() + '\'' +
                 ", supercicia=" + getSupercicia() +
-                ", personeInteressate=" + aggiungipersona() +
+                ", personeInteressate=" + getPersonaInteressata()+
                 "numeroposti=" + numeroposti +
                 '}';
     }
